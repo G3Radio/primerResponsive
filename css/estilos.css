@@ -1,26 +1,40 @@
 /* RESET */
-*{
+* {
     box-sizing: border-box;
 }
 
 /* VARIABLES */
 
-
 /* CONTENIDO MÓVIL */
-header{
-
-}
-.header__banner{
+.header__banner {
     display: block;
     height: 200px;
-    background-image: url(../img/bannerMovil.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    
+
+    /* Retina Display */
+    /* Móvil */
+    @media only screen and (min-width: 320px) and (max-width: 500px) and (orientation: portrait) {
+        @media (-webkit-min-device-pixel-ratio: 1){
+            background-image: url(../img/smartphone/bannerMovil.webp);
+        }
+
+        @media (-webkit-min-device-pixel-ratio: 2) {
+            background-image: url(../img/smartphone/bannerMovil@2x.webp);
+        }
+
+        @media (-webkit-min-device-pixel-ratio: 3) {
+            background-image: url(../img/smartphone/bannerMovil@3x.webp);
+        }
+    }
+
     /* Escritorio */
-    @media only screen and (min-width: 1200px){
-        background-image: url(../img/bannerEscritorio.webp);
-        height: 400px;
+    @media only screen and (min-width: 1000px) {
+        height: 400px; /* Altura común para ambos casos */
+        background-image: url(../img/desktop/bannerEscritorio.webp);
+        @media (-webkit-max-device-pixel-ratio: 2) {
+            background-image: url(../img/desktop/bannerEscritorio@2x.webp);
+        }
     }
 }
