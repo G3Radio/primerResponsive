@@ -52,8 +52,51 @@
         </header>
         <!-- MAIN, zona central diferente en todos los HTML, es el contenido diferenciador de las páginas -->
         <main>
+            <!-- Insertar dos imágenes para móvil y escritorio -->
+            <!-- Imágen UNO -->
+            <picture class="main__imagen01">
+                <!-- smartphone -->
+                <source
+                srcset="
+                img/smartphone/paisajeMovil01.webp    1x,
+                img/smartphone/paisajeMovil01@2x.webp 2x,
+                img/smartphone/paisajeMovil01@3x.webp 3x
+                "
+                media="(min-width:320px) and (orientation:portrait)"
+                />
+                
+                <!-- desktop -->
+                <source
+                    srcset="
+                        img/desktop/paisajeEscritorio01.webp    1x,
+                        img/desktop/paisajeEscritorio01@2x.webp 2x
+                    "
+                    media="(min-width:1000px)"
+                />
+                <img src="" alt="nubes altas entre montañas" />
+            </picture>
+            <!-- Imágen DOS -->
+            <picture class="main__imagen02">
+                <!-- smartphone -->
+                <source
+                    srcset="
+                        img/smartphone/paisajeMovil02.webp    1x,
+                        img/smartphone/paisajeMovil02@2x.webp 2x,
+                        img/smartphone/paisajeMovil02@3x.webp 3x
+                    "
+                    media="(min-width:320px) and (orientation:portrait)"
+                />
 
-            
+                <!-- desktop -->
+                <source
+                    srcset="
+                        img/desktop/paisajeEscritorio02.webp    1x,
+                        img/desktop/paisajeEscritorio02@2x.webp 2x
+                    "
+                    media="(min-width:1000px)"
+                />
+                <img src="" alt="nubes altas entre montañas" />
+            </picture>
         </main>
         <!-- FOOTER, zona inferior que se repite en todos los HTML -->
         <footer></footer>

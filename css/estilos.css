@@ -6,6 +6,7 @@
 /* VARIABLES */
 
 /* CONTENIDO MÓVIL */
+/* HEADER */
 .header__banner {
     display: block;
     height: 200px;
@@ -36,5 +37,18 @@
         @media (-webkit-max-device-pixel-ratio: 2) {
             background-image: url(../img/desktop/bannerEscritorio@2x.webp);
         }
+    }
+}
+
+
+/* CONTENIDO MÓVIL */
+/* MAIN */
+main{
+    display: grid;
+    /* Gestiona las columnas automáticamente */
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+
+    & img{
+        width: 100%;
     }
 }
