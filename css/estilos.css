@@ -5,7 +5,7 @@
 
 /* VARIABLES */
 
-/* CONTENIDO MÓVIL */
+/* CONTENIDO(background-image) MÓVIL "MOBILE-FIRST" made in spain */
 /* HEADER */
 .header__banner {
     display: block;
@@ -30,24 +30,26 @@
         }
     }
 
-    /* Escritorio */
+    /* Escritorio - Ordenador no es un dispotivo móvil */
     @media only screen and (min-width: 1000px) {
-        height: 400px; /* Altura común para ambos casos */
+        height: 400px; /* Altura cambia */
+
+        @media (-webkit-min-device-pixel-ratio: 1){
         background-image: url(../img/desktop/bannerEscritorio.webp);
+        }
         @media (-webkit-max-device-pixel-ratio: 2) {
             background-image: url(../img/desktop/bannerEscritorio@2x.webp);
         }
     }
 }
 
-
-/* CONTENIDO MÓVIL y ESCRITORIO */
+/* CONTENIDO (img) MÓVIL */
 /* MAIN */
 main{
     display: grid;
     /* Gestiona las columnas automáticamente */
-    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
-    grid-template-rows: repeat(2, 400px);
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-template-rows: repeat(2, 300px);
 
     & img{
         width: 100%;
